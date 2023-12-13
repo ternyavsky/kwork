@@ -1,0 +1,37 @@
+.request__container {
+    display: flex;
+}
+
+.checkbox_invis {
+    display: none;
+}
+
+.ClientList___container {
+    width: 60%;
+    height: 100%;
+    float: left;
+}
+
+.LastChat___container {
+    width: 40%;
+    height: 100%;
+    margin: 0;
+    float: right;
+}
+
+@media screen and (max-width: 1199px) {
+
+    .LastChat___container {
+        display: none;
+        width: 100%;
+    }
+
+    #toggleLink:checked~.LastChat___container {
+        display: block;
+    }
+
+    #toggleLink:checked~#div1 {
+        display: none;
+    }
+
+}

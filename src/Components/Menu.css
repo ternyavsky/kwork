@@ -1,0 +1,100 @@
+.menu__container {
+    background-color: #33384B !important;
+}
+
+.nav-link-menu {
+    color: white;
+    font-weight: 600;
+    font-size: 20px;
+    letter-spacing: 7%;
+}
+
+.nav-link-menu_active {
+    color: #33384B;
+    font-weight: 600;
+    font-size: 20px;
+    letter-spacing: 7%;
+}
+
+.nav-link-menu:hover {
+    color: #CFA63C;
+}
+
+.nav-link-menu:active {
+    color: #a28231;
+}
+
+.menu__buttonbgc_active {
+    background-color: #CFA63C;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-top: -10px;
+    margin-bottom: -10px;
+}
+
+.menu__buttonbgc {
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-top: -10px;
+    margin-bottom: -10px;
+}
+
+.menu__buttonbgc:hover {
+    background-color: #484e64;
+}
+
+@media screen and (max-width: 1199px) {
+    .menu__buttonbgc_active {
+        background-color: #CFA63C;
+        padding-left: 20px;
+        padding-right: 20px;
+        padding-top: 13px;
+        padding-bottom: 13px;
+        margin-top: -12px;
+        margin-bottom: -13px;
+    }
+
+    .menu__buttonbgc {
+        padding-left: 20px;
+        padding-right: 20px;
+        padding-top: 13px;
+        padding-bottom: 13px;
+        margin-top: -12px;
+        margin-bottom: -13px;
+    }
+}
+
+@media screen and (max-width: 991px) {
+    .menu__buttonbgc_active {
+        background-color: #CFA63C;
+        padding-left: 20px;
+        padding-right: 20px;
+        padding-top: 0 !important;
+        padding-bottom: 0 !important;
+        margin-top: 0px !important;
+        margin-bottom: 0;
+    }
+
+    .menu__buttonbgc {
+        padding-left: 20px;
+        padding-right: 20px;
+        padding-top: 0 !important;
+        padding-bottom: 0 !important;
+        margin-top: 0px !important;
+        margin-bottom: 0;
+    }
+}
+
+.notifications_circle {
+    display: inline;
+    padding: 1px 6px 2px 5px;
+    border-radius: 50px;
+    margin-left: 3px;
+    font-size: 12px;
+    height: 5px;
+    background-color: red;
+}

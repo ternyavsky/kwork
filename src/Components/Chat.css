@@ -1,0 +1,92 @@
+.Chat__container {
+    margin-left: 0px;
+    position: absolute;
+    left: 0;
+    height: 65%;
+    width: 50vw;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    background-color: #F4F4F4;
+}
+
+.next_life__chat {
+    width: 100%;
+    height: 0;
+    padding-top: 50px;
+    background-color: #CFA63C;
+}
+
+.Chat_checkbox {
+    display: none;
+}
+
+.ButtonList {
+    display: none;
+}
+
+.ButtonChat {
+    display: none;
+}
+
+.chat_rect_invis {
+    margin-top: 50px;
+    height: 100px;
+}
+
+@media only screen and (max-width: 1199px) {
+    .Chat__container {
+        width: 100%;
+        height: 75%;
+    }
+
+    .chat_rect_invis {
+        margin-top: 100px;
+        height: 100px;
+    }
+
+    .ButtonList {
+        display: block;
+        margin-top: 20px;
+        width: 140px;
+        height: 40px;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        font-size: 20px;
+        text-align: center;
+        color: #ffffff;
+        font-weight: bold;
+        border-radius: 5px;
+        margin-left: 10px;
+        background-color: #33384B;
+    }
+
+    .ButtonChat {
+        display: block;
+        margin-top: 20px;
+        width: 140px;
+        height: 40px;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        font-size: 20px;
+        text-align: center;
+        color: #ffffff;
+        font-weight: bold;
+        border-radius: 5px;
+        margin-right: 10px;
+        background-color: #33384B;
+    }
+
+    .ButtonType__container {
+        display: flex;
+        position: sticky;
+        align-items: center;
+        justify-content: space-between;
+        /* Используйте flex-start или другое значение */
+    }
+}
+
+.futurecont {
+    width: 100%;
+    padding-bottom: 70px;
+}

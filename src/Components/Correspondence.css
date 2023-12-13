@@ -1,0 +1,91 @@
+.item__container {
+    display: flex;
+    margin: 0;
+    margin-top: 70px;
+}
+
+.Navbar_item0 {
+    position: absolute;
+    width: 100%;
+    padding-bottom: 50px;
+}
+
+.item1 {
+    width: 25%;
+    height: 100vh;
+    background-color: #fff;
+}
+
+.item2 {
+    position: relative;
+    width: 50%;
+}
+
+.item3 {
+    background-color: #fff;
+    width: 25%;
+}
+
+@media only screen and (max-width: 1199px) {
+    .item1 {
+        display: none;
+    }
+
+    .item3 {
+        display: none;
+    }
+
+    .item2 {
+        position: static;
+        height: 100%;
+    }
+}
+
+.checkbox_inss {
+    z-index: 300;
+}
+
+.checkbox_ins {
+    display: none;
+}
+
+.ButtonList_close {
+    display: none;
+}
+
+@media screen and (max-width: 1199px) {
+
+    #toggleList:checked~.item1 {
+        position: absolute;
+        height: 100%;
+        overflow: auto;
+        display: block;
+    }
+
+    #toggleChat:checked~.item3 {
+        position: absolute;
+        height: 100%;
+        overflow: auto;
+        display: block;
+    }
+
+    .ButtonList_close {
+        display: block;
+        top: 4px;
+        left: 10px;
+        position: absolute;
+    }
+
+    .item1 {
+        width: 100%;
+        position: absolute;
+        z-index: 300;
+    }
+
+    .item3 {
+        width: 100%;
+        right: 0;
+        position: absolute;
+        z-index: 300;
+    }
+}

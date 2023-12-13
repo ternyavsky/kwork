@@ -1,0 +1,412 @@
+html,
+body {
+    background-color: white;
+    overflow: hidden;
+}
+
+.ChatManage__container {
+    background-color: white;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 74%;
+    overflow: visible;
+    left: 0;
+}
+
+@media screen and (max-height: 1110px) and (min-width:1199px) {
+    .ChatManage__container {
+        top: 73%;
+    }
+}
+
+@media screen and (max-height: 1067px) and (min-width:1199px) {
+    .ChatManage__container {
+        top: 72%;
+    }
+}
+
+@media screen and (max-height: 1019px) and (min-width:1199px) {
+    .ChatManage__container {
+        top: 70%;
+    }
+}
+
+@media screen and (max-height: 957px) and (min-width:1199px) {
+    .ChatManage__container {
+        top: 68%;
+    }
+}
+
+@media screen and (max-height: 910px) and (min-width:1199px) {
+    .ChatManage__container {
+        top: 66%;
+    }
+}
+
+@media screen and (max-height: 858px) and (min-width:1199px) {
+    .ChatManage__container {
+        top: 64%;
+    }
+}
+
+@media screen and (max-height: 823px) and (min-width:1199px) {
+    .ChatManage__container {
+        top: 63%;
+    }
+}
+
+@media screen and (max-height: 1179px) and (max-width:1199px) {
+    .ChatManage__container {
+        top: 85%;
+    }
+}
+
+@media screen and (max-height: 1099px) and (max-width:1199px) {
+    .ChatManage__container {
+        top: 84%;
+    }
+}
+
+@media screen and (max-height: 994px) and (max-width:1199px) {
+    .ChatManage__container {
+        top: 82%;
+    }
+}
+
+@media screen and (max-height: 877px) and (max-width:1199px) {
+    .ChatManage__container {
+        top: 80%;
+    }
+}
+
+@media screen and (max-height: 812px) and (max-width:1199px) {
+    .ChatManage__container {
+        top: 78%;
+    }
+}
+
+@media screen and (max-height: 725px) and (max-width:1199px) {
+    .ChatManage__container {
+        top: 77%;
+    }
+}
+
+@media screen and (max-height: 666px) and (max-width:1199px) {
+    .ChatManage__container {
+        top: 73%;
+    }
+}
+
+@media screen and (max-height: 590px) and (max-width:1199px) {
+    .ChatManage__container {
+        top: 72%;
+    }
+}
+
+@media screen and (max-height: 884px) and (max-width:526px) {
+    .ChatManage__container {
+        top: 87%;
+    }
+}
+
+@media screen and (max-height: 806px) and (max-width:526px) {
+    .ChatManage__container {
+        top: 85%;
+    }
+}
+
+@media screen and (max-height: 700px) and (max-width:526px) {
+    .ChatManage__container {
+        top: 83%;
+    }
+}
+
+@media screen and (max-height: 625px) and (max-width:526px) {
+    .ChatManage__container {
+        top: 81%;
+    }
+}
+
+@media screen and (max-height: 558px) and (max-width:526px) {
+    .ChatManage__container {
+        top: 78%;
+    }
+}
+
+@media (min-width: 1199px) and (max-height: 782px) {
+    .ChatManage__container {
+        top: 80%;
+    }
+}
+
+.chat_tools {
+    margin-top: 5px;
+    display: flex;
+    align-items: flex-start;
+}
+
+.img_chattools {
+    flex-shrink: 0;
+    margin-right: 10px;
+    margin-left: 10px;
+}
+
+.input_chattools {
+    flex-grow: 1;
+    padding-top: 13px;
+    padding-bottom: 13px;
+    background-color: #B8B8B8;
+    border-radius: 5px;
+    outline: none;
+    border: none;
+    font-size: 20px;
+    margin-left: 20px;
+    padding-left: 16px;
+}
+
+@media only screen and (max-width: 395px) {
+    .input_chattools {
+        width: 50%;
+    }
+}
+
+.ChangeDealStatus {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 15px;
+}
+
+.menu-container {
+    display: none;
+}
+
+@media only screen and (max-width: 600px) {
+    .ChangeDealStatus {
+        margin-top: -5px;
+    }
+}
+
+@media only screen and (max-width: 525px) {
+    .ChangeDealStatus {
+        display: none;
+    }
+
+    .menu-container {
+        display: block;
+        position: relative;
+        width: 100px;
+        /* Измените ширину меню по вашему усмотрению */
+    }
+
+    .menu-button {
+        display: block;
+        cursor: pointer;
+        padding: 10px;
+        background-color: #33384B;
+        position: relative;
+        z-index: 2;
+    }
+
+    .menu-items {
+        list-style: none;
+        margin: 0;
+        padding-top: 10px;
+        padding-left: 0;
+        position: absolute;
+        bottom: 100%;
+        left: 0;
+        width: 100vw;
+        background-color: #33384B;
+        transform-origin: bottom;
+        transform: scaleY(0);
+        z-index: 1;
+    }
+
+    .menu-items li {
+        padding: 10px;
+    }
+
+    .menu-items a {
+        text-decoration: none;
+        color: #333;
+    }
+
+    #menu-toggle:checked~.menu-items {
+        transform: scaleY(1);
+    }
+
+    #menu-toggle {
+        display: none;
+    }
+
+    .ButtonChange_small {
+        background-color: #33384B;
+        border: none;
+        color: white;
+        font-weight: 900;
+        font-size: 16px;
+        padding: 14px 33px 14px 33px;
+        width: 100vw;
+    }
+}
+
+.dd_cm {
+    width: 90%;
+}
+
+.dropdown_chatmanage {
+    width: 400px;
+    height: 50px;
+    border-radius: 25px;
+    text-align: start;
+    padding-left: 20px;
+    font-size: 18px;
+    font-weight: 900;
+    color: #33384B !important;
+    background-color: #B8B8B8;
+    border: none;
+    margin-right: 10px;
+}
+
+.input-group-cm {
+    justify-content: center;
+}
+
+.img_attachphoto {
+    filter: brightness(100%) contrast(18%) saturate(20%);
+}
+
+.form-label-cm {
+    font-weight: 600;
+    color: #33384B;
+    font-size: 16px;
+    margin-left: 15px;
+}
+
+.chatmanage_modal_input {
+    height: 150px;
+    max-width: 420px;
+    border-radius: 2px;
+    border: none;
+    background-color: #B8B8B8;
+}
+
+.ButtonAccept {
+    text-align: center;
+    background-color: #CFA63C;
+    border: none;
+    color: #33384B;
+    font-weight: 900;
+    font-size: 16px;
+    padding: 20px 33px 20px 33px;
+    width: 90%;
+}
+
+.ButtonChange_open {
+    text-align: center;
+    background-color: #33384B;
+    border: none;
+    color: white;
+    font-weight: 900;
+    font-size: 16px;
+    padding: 14px 33px 14px 33px;
+    width: 100vw;
+    height: 70px;
+    margin-bottom: 10px;
+    margin-left: -10px;
+}
+
+@media only screen and (max-width: 526px) {
+    .ButtonChange_open {
+        margin-top: -14px;
+    }
+}
+
+
+@media only screen and (max-height: 812px) {}
+
+.ButtonChange {
+    background-color: #33384B;
+    border: none;
+    color: white;
+    font-weight: 900;
+    font-size: 18px;
+    padding: 14px 33px 14px 33px;
+    width: 100%;
+    height: 100px;
+}
+
+@media only screen and (max-width: 1500px) {
+    .ButtonChange {
+        background-color: #33384B;
+        border: none;
+        color: white;
+        font-weight: 900;
+        font-size: 18px;
+        padding: 14px 33px 14px 33px;
+        width: 100%;
+        height: 100px;
+    }
+}
+
+.input_chattools::placeholder {
+    color: #4a4a4a;
+}
+
+@media only screen and (max-width: 600px) {
+
+    /* Медиа-запрос для адаптивности на устройствах с шириной экрана до 600px */
+    .chat_tools {
+        flex-wrap: wrap;
+    }
+
+    .img_chattools {
+        flex-basis: 100%;
+        margin-right: 0;
+        margin-bottom: 10px;
+        /* Добавьте отступ снизу между кнопкой и инпутом */
+    }
+}
+
+.img_chattools:hover {
+    filter: contrast(50%);
+}
+
+.img_attachphoto:hover {
+    filter: brightness(10%) contrast(18%) saturate(20%);
+}
+
+.img_sendmessage:hover {
+    filter: brightness(50%);
+}
+
+
+.ButtonChange:hover {
+    background-color: #CFA63C;
+    color: #33384B;
+    transition: 0.3s;
+}
+
+.form-label-cm {
+    margin-left: 30px;
+    margin-bottom: -5px;
+}
+
+.modal-title-cm {
+    font-weight: 900;
+    color: #33384B;
+    font-size: 24px;
+    margin-left: 15px;
+    margin-bottom: -15px;
+}
+
+@media (min-width: 1199px) and (max-height: 782px) {
+    body {
+        zoom: 67%;
+    }
+}
+
+.Chat__container {
+    width: 100%;
+}
