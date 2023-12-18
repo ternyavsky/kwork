@@ -4,7 +4,7 @@ import ChatManageStyles from './ChatManage.css'
 import Attachphoto from '../attachphoto.svg'
 import SendMessage from '../sendmessage.svg'
 import Rename from '../rename.svg'
-import { chatData } from '../api/request'
+import { chatData, exclude } from '../api/request'
 import { useState, useEffect } from 'react'
 import { useLocation } from 'react-router-dom'
 
@@ -13,6 +13,7 @@ import { useLocation } from 'react-router-dom'
 export default function Chat({ toggleListId, toggleBotId }) {
     const [chatId, setChatId] = useState("");
     const { pathname } = useLocation();
+    const [ignComment, setIgnComment] = useState("")
     function formatDate(date) {
         var d = new Date(date)
         var minutes = '' + d.getMinutes()
@@ -54,7 +55,7 @@ export default function Chat({ toggleListId, toggleBotId }) {
                                     <p className="message_text">{res["text"]}</p>
                                 </div>
                             </div>
-                        )}  
+                        )}
                         <div className="ButtonType__container">
                             <div className="ButtonList">
                                 <input type="checkbox" id={toggleListId} className='Chat_checkbox' />
@@ -115,7 +116,7 @@ export default function Chat({ toggleListId, toggleBotId }) {
                     <div class="modal-dialog modal-dialog-centered">
                         <div class="modal-content">
                             <div class="modal-header">
-                                <h1 class="modal-title-cm modal-title mt-2 fs-5" id="staticBackdropLabel">Перевод на бота</h1>
+                                <h1 class="modal-title-cm modal-title mt-2 fs-5" id="staticBackdropLabel">Выставить счёт</h1>
                                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                             </div>
                             <div class="modal-body">
@@ -174,12 +175,18 @@ export default function Chat({ toggleListId, toggleBotId }) {
                                 <div>
                                     <label for="basic-url" class="form-label-cm form-label mb-2 ">Причина</label>
                                     <div class="input-group-cm input-group">
-                                        <input type="text" class="chatmanage_modal_input form-control" id="basic-url" aria-describedby="basic-addon3 basic-addon4" />
+                                        <input type="text" class="chatmanage_modal_input form-control" id="basic-url" aria-describedby="basic-addon3 basic-addon4" onChange={(e) => {
+                                            setIgnComment(e.target.value)
+                                        }} />
                                     </div>
                                 </div>
                             </div>
                             <div class="modal-footer d-flex justify-content-center">
-                                <button type="button" class="ButtonAccept mb-5">Отключить</button>
+                                <button type="button" class="ButtonAccept mb-5" aria-label='Close' data-bs-dismiss="modal" onClick={() => {
+                                    exclude(pathname.slice(1), ignComment)
+                                    console.log("click")
+
+                                }}>Отключить</button>
                             </div>
                         </div>
                     </div>
@@ -202,11 +209,11 @@ export default function Chat({ toggleListId, toggleBotId }) {
                     </label>
                     <ul class="menu-items">
                         <button className="ButtonChange_small">Выставить счет</button>
-                        <button className="ButtonChange_small">Перевести на бота</button>
-                        <button className="ButtonChange_small">Отключить</button>
+                        <button className="ButtonChange_small" >Перевести на бота</button>
+                        <button className="ButtonChange_small" >Отключить</button>
                     </ul>
                 </div>
-            </div>
+            </div >
         </>
 
     )

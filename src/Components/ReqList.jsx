@@ -164,43 +164,51 @@ export default function ReqList() {
                     </div>
                 </div>
             </div>
-            {request.map((req) => {
-                const dateNum = "16"
-                console.log(formatDate(req["created"])[0])
-                return (
 
+            <div>
+
+                {request.map(req => (
                     <>
-                            <div>
-
-                                <div className="req_date">
-                                    <p>{formatDate(req["created"])[0]} {monthArray[formatDate(req["created"])[1]]}</p>
-                                </div>
-
+                        <div className="req_date">
+                            <p>{formatDate(req["created"])[0]} {monthArray[formatDate(req["created"])[1]]}</p>
+                        </div>
                         <Link to={`/${req["chat_id"]}`}>
-                                <div className="list_request">
-                                    <div className="req_line1">
-                                        <div className="req_avatar">
-                                            <button type="button" class="modal_button_clientlist" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                                                <img src={req["user_avatar"]} alt="" />
-                                            </button>
-                                            <div className="req_text">{req["text"]}</div>
-                                        </div>
+                            <div className="list_request">
+                                <div className="req_line1">
+                                    <div className="req_avatar">
+                                        <button type="button" class="modal_button_clientlist" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                                            <img src={req["user_avatar"]} alt="" />
+                                        </button>
+                                        <div className="req_text">{req["text"]}</div>
                                     </div>
-                                    <div className="req_status">
-                                        <div className="status_img">
-                                            <img src={Bill} alt="" />
-                                            <span className='status_text'>HDV</span>
-                                        </div>
+                                </div>
+                                <div className="req_status">
+                                    <div className="status_img">
+                                        <img src={Bill} alt="" />
+                                        <span className='status_text'>HDV</span>
                                     </div>
                                 </div>
                             </div>
+                        </Link >
                     </>
-                )
-            }
+                ))}
 
-            )}
+
+
+
+
+
+
+
+
+            </div>
+
+
 
             <div className="rect_invis"></div>
-        </div>
+        </div >
     )
 }
+
+
+// create new object ex: data: created:12.03.12, obj: {}
