@@ -51,7 +51,7 @@ export default function ReqList() {
 
         requestData().then(res => {
             setRequest(res.data)
-        })
+        }).catch(err => console.log("backend not work"))
     }, [])
     console.log(request)
     console.log(formatDate(request["created"]))
@@ -167,7 +167,7 @@ export default function ReqList() {
 
             <div>
 
-                {request.map(req => (
+                {request.length > 0 && request.map(req => (
                     <>
                         <div className="req_date">
                             <p>{formatDate(req["created"])[0]} {monthArray[formatDate(req["created"])[1]]}</p>
